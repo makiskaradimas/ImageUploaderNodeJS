@@ -1,0 +1,5 @@
+node_modules
+public/upload/*.jpg
+.idea
+.project
+.tags

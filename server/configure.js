@@ -15,7 +15,7 @@ module.exports = function (app) {
     app.use(bodyParser.urlencoded({ extended: false }))
     app.use(methodOverride());
     app.use(cookieParser('some-secret-value-here'));
-    routes(app);
+    routes.initialize(app);
     app.use('/public/', express.static(path.join(__dirname, '../public')));
     if ('development' === app.get('env')) {
         app.use(errorHandler());
